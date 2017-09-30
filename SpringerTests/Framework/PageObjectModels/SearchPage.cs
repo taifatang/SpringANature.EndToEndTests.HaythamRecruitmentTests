@@ -43,9 +43,33 @@ namespace SpringerTests.Framework.PageObjectModels
         {
             Assert.That(SearchResult.Text.Contains(expectedKeyWord));
         }
-        public void ValidateNotFound()
+        public void ValidateSearchNotFound()
         {
             Assert.That(NotFound.Displayed);
+        }
+    }
+
+    public class AdvanceSearchPage
+    {
+        private const string AdvanceSearchUrl = "https://link.springer.com/advanced-search";
+        private readonly IWebDriver _driver;
+
+        public AdvanceSearchPage(IWebDriver driver)
+        {
+            _driver = driver;
+            PageFactory.InitElements(driver, this);
+        }
+
+        public void Navigate()
+        {
+            _driver.Navigate().GoToUrl(AdvanceSearchUrl);
+        }
+
+        public void Search(string input)
+        {
+            SearchInput.Clear();
+            SearchInput.SendKeys(input);
+            SearchButton.Click();
         }
     }
 }
