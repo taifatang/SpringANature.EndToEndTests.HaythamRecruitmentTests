@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace SpringerTests
+namespace SpringerTests.Features
 {
     using TechTalk.SpecFlow;
     
