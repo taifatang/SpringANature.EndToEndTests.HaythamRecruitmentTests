@@ -68,13 +68,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Framework\PageObjectModels\BaseSearchPage.cs" />
+    <Compile Include="Steps\AdvanceSearchSteps.cs" />
+    <Compile Include="Features\AdvanceSearch.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdvanceSearch.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Search.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Search.feature</DependentUpon>
     </Compile>
-    <Compile Include="Framework\WebDriverSupport.cs" />
-    <Compile Include="Framework\PageObjectModels\IBrowsable.cs" />
+    <Compile Include="Framework\PageObjectModels\AdvanceSearchPage.cs" />
+    <Compile Include="Framework\SeleniumIoCFactory.cs" />
     <Compile Include="Framework\PageObjectModels\SearchPage.cs" />
     <Compile Include="Framework\StateManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,11 +91,16 @@
       <DependentUpon>SearchTest.feature</DependentUpon>
     </Compile>
     <Compile Include="Steps\SearchSteps.cs" />
+    <Compile Include="Steps\SharedSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Default.srprofile">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Features\AdvanceSearch.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AdvanceSearch.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Search.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

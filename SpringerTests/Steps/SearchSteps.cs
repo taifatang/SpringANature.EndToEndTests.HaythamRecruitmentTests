@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.PageObjects;
+using SpringerTests.Framework;
 using SpringerTests.Framework.PageObjectModels;
 using TechTalk.SpecFlow;
 
@@ -34,18 +35,8 @@ namespace SpringerTests.Steps
         public void WhenISearchForThe(string userInput)
         {
             _searchPage.Search(userInput);
-        }
-
-        [Then(@"I receive search results with the (.*) in a title")]
-        public void ThenIReceiveSearchResultsWithTheInATitle(string expectedKeyword)
-        {
-            _searchPage.ValidateSearchResult(expectedKeyword);
-        }
-
-        [Then(@"I receive not found message")]
-        public void ThenIReceiveNotFoundMessage()
-        {
-            _searchPage.ValidateSearchNotFound();
+            StateManager.Save("result", _searchPage.SearchResult);
+            StateManager.Save("error-result", _searchPage.NotFound);
         }
     }
 }

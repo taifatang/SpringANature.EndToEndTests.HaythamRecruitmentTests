@@ -66,7 +66,7 @@ Examples:
 Scenario Outline: Inputting valid date in the Published date field
 	Given I am a user
 	And I navigate to the 'https://link.springer.com/advanced-search'
-	When I input a valid date in the <publishDate>
+	When I input a date in the <publishDate>
 	Then I receive search results with books of the pulished date <outputWord>
 
 Examples: 

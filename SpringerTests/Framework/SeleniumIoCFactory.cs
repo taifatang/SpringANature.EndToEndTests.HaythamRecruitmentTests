@@ -7,11 +7,11 @@ using TechTalk.SpecFlow;
 namespace SpringerTests.Framework
 {
     [Binding]
-    public class WebDriverSupport
+    public class SeleniumIoCFactory
     {
         private readonly IObjectContainer _objectContainer;
 
-        public WebDriverSupport(IObjectContainer objectContainer)
+        public SeleniumIoCFactory(IObjectContainer objectContainer)
         {
             _objectContainer = objectContainer;
         }

@@ -213,7 +213,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 68
  testRunner.And("I navigate to the \'https://link.springer.com/advanced-search\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 69
- testRunner.When(string.Format("I input a valid date in the {0}", publishDate), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I input a date in the {0}", publishDate), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 70
  testRunner.Then(string.Format("I receive search results with books of the pulished date {0}", outputWord), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

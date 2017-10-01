@@ -22,11 +22,5 @@ Scenario Outline: Negative test - Inputting special characters in the Search bar
 
 Examples:
 	| invalidWords |
-	| Maths	   	   |
+	| !"£!"£!"£"!  |
 
-@advancedSearch
-@happyPath
-Scenario Outline: Inputting valid texts in the Advanced Search fields
-	Given I am on Advance Search Page
-	When I search each field individually: <all>, <exactPhrase>, <oneOfTheWords>, <without>, <title>, <authorEditor>
-	Then I receive search results with the <outputWord> in a title

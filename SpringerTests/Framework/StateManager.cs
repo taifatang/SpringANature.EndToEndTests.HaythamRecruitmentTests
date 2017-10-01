@@ -4,7 +4,7 @@ namespace SpringerTests.Framework
 {
     public class StateManager
     {
-        public static void Save(string key, string value)
+        public static void Save(string key, object value)
         {
             ScenarioContext.Current[key] = value;
         }
